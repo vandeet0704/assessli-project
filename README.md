@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is the React Project for [Assessli](https://assessli.com) by `Vandeet Shah`.
 
-## Getting Started
+# Getting Started
 
-First, run the development server:
+This project is made using React with `Next.js` framework and `ShadCN React UI library`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Setup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `Download / Pull` entire repository from [here](https://github.com/vandeet0704/assessli-project.git).
+- Open terminal and `cd` to project folder.
+- Run `npm install`.
+- Go to [`http://localhost:3000`](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Google Sheet Integration
+Used [`SheetsDB`](https://sheetdb.io) for Google Sheet Integration. It turns CURL commands into simple API calls.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+For integrating your own Google Sheet:
+### Create new Sheet:
+- Create a new Google Sheet.
+- Add Columns `First Name`	`Last Name`	`Email`	`Country Code`	`Phone Number`	`Message`.
+- Click on Share.
+- Allow `Anyone with the link` access. Give `Edit` rights.
+### Create new SheetDB API:
+- Go to [`SheetsDB`](https://sheetdb.io)
+- Create a new account if you do not have an account.
+- Click on `Create new API`
+- Paste your Google Sheets share link.
+- Click on Create.
+### Integrating into Code File:
+- Go to `src/components/Form.tsx`.
+- Find `onSubmit()` function.
+- Replace already existing API Key inside `fetch()` with your API Key.
 
-## Learn More
+# Features
 
-To learn more about Next.js, take a look at the following resources:
+- Support for `Dark Mode` and `Light Mode`
+- Completely `responsive` across all range devices.
+- `Visual cue` for wrong inputs with valid messages.
+- `Sonner` update on successful form submission.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
