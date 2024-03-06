@@ -30,7 +30,7 @@ export default function Home() {
           className="z-0"
         />
       </div>
-      <div className="p-12 md:p-18 lg:p-24 z-1 relative">
+      <div className="p-4 md:p-18 lg:p-24 z-1 relative">
         <div className="flex flex-col items-start z-2">
           <Label className="text-base sm:text-xl font-light foreground-secondary z-2">still have questions?</Label>
           <Label className="text-5xl sm:text-6xl font-bold foreground-secondary z-2">Contact Us...</Label>
